@@ -1,0 +1,168 @@
+html p{
+    font-family: poppins;
+}
+section, nav{
+    padding: 60px 0;
+}
+.card:hover {
+    transform: translateY(-10px); 
+    transition: transform 0.5s ease; 
+}
+img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+input:hover{
+    outline: 2px solid blue;
+    transform: scale(1.01); 
+    transition: transform 0.3s ease; 
+    box-shadow: 2px 0px blue;
+}
+.card, img, input{
+    cursor: pointer;
+}
+/* Facebook-like theme */
+.modal-header {
+    background-color: #4267B2; /* Facebook blue */
+}
+
+.btn-warning {
+    background-color: #FFC107;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    border-color: #4267B2;
+    color: #4267B2;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #4267B2;
+    color: #fff;
+}
+#searchResults {
+    width: 66%; /* Make the dropdown full width */
+    z-index: 1000; /* Ensure the dropdown appears above other elements */
+}
+
+.dropdown-item {
+    padding: 10px; /* Add some padding for better aesthetics */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Change background on hover */
+}
+
+
+.img-thumbnail {
+    border-radius: 4px;
+}
+
+.card-img-top {
+    width: 100%;           /* Full width of the card */
+    max-height: 250px;     /* Set a maximum height for the image */
+    object-fit: contain;    /* Ensures the full image is shown */
+}
+
+.card-release-date {
+    font-size: 0.9em; /* Adjust font size */
+    color: gray; /* Change color to differentiate from title and overview */
+    margin-top: 5px; /* Adds some space above */
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat for "Trailer" */
+    font-size: 48px; /* Adjust the font size as needed */
+    color: #e50914; /* Netflix red for "Trailer" */
+    letter-spacing: 2px; /* Spacing for effect */
+}
+
+.tube {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for "Tube" */
+    color: #ffffff; /* White color for "Tube" */
+    font-size: 48px; /* Match size with "Trailer" */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+}
+
+/* Light Theme */
+body.bg-light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Dark Theme */
+body.bg-dark {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+/* Navbar and other elements */
+.navbar.bg-primary {
+    background-color: #0d6efd;
+}
+
+.card.bg-light {
+    background-color: white;
+    color: black;
+}
+
+.card.bg-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider background */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* Slider round effect */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Toggle on (checked) state */
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
