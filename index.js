@@ -82,9 +82,8 @@ async function fetchMovieTrailer(movieId) {
     return null;
 }
 
-// Function to show movie details in modal
+// Show movie details in modal
 function showMovieDetails(movie) {
-    // Populate modal with movie data
     document.getElementById('modalPoster').src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     document.getElementById('modalTitle').textContent = movie.title;
     document.getElementById('modalOverview').textContent = movie.overview;
@@ -92,18 +91,27 @@ function showMovieDetails(movie) {
 
     // Fetch the trailer and embed it into the modal
     fetchMovieTrailer(movie.id).then((trailerUrl) => {
+        const trailerContainer = document.getElementById('trailerContainer');
+        const trailerVideo = document.getElementById('trailerVideo');
+        
         if (trailerUrl) {
-            document.getElementById('trailerContainer').style.display = 'block';
-            document.getElementById('trailerVideo').src = trailerUrl;
+            trailerContainer.style.display = 'block';
+            trailerVideo.src = trailerUrl;
         } else {
-            document.getElementById('trailerContainer').style.display = 'none';
+            trailerContainer.style.display = 'none';
+            trailerVideo.src = ''; // Clear src if no trailer
         }
     });
 
-    // Show the modal
     const movieModal = new bootstrap.Modal(document.getElementById('movieModal'));
     movieModal.show();
+
+    // Clear trailer when modal is hidden
+    document.getElementById('movieModal').addEventListener('hidden.bs.modal', () => {
+        document.getElementById('trailerVideo').src = '';
+    });
 }
+
 
 // Fetch movies based on search query
 async function fetchSearchResults(query) {

@@ -166,3 +166,34 @@ body.bg-dark {
   input:checked + .slider:before {
     transform: translateX(24px);
   }
+  /* Mobile-specific styles for modal and dropdown */
+
+@media (max-width: 576px) {
+    /* Adjust modal size for mobile view */
+    .modal-dialog {
+        width: 90%; /* Smaller width on mobile */
+        margin: 20px auto;
+    }
+    .modal-content {
+        max-height: 80vh; /* Limit height */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+
+    /* Trailer container height for mobile */
+    #trailerContainer {
+        height: 180px; /* Smaller trailer size */
+    }
+
+    /* Ensure search results dropdown appears directly below input on mobile */
+    #searchResults {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1050; /* Ensures it's above other content */
+        max-height: 250px; /* Limit height for mobile */
+        overflow-y: auto;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
