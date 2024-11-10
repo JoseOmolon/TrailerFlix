@@ -1,4 +1,3 @@
-const API_KEY = '237615b5cd69af33f4c1fb47f99783e5';
 
 // Function to fetch trending movies
 async function fetchTrendingMovies() {
@@ -55,6 +54,7 @@ async function fetchTrendingMovies() {
         return [];
     }
 }
+const API_KEY = '237615b5cd69af33f4c1fb47f99783e5';
 
 // Function to generate star rating
 function generateStarRating(voteAverage) {
