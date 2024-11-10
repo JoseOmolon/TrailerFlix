@@ -3,7 +3,7 @@ const API_KEY = '237615b5cd69af33f4c1fb47f99783e5';
 // Function to fetch trending movies
 async function fetchTrendingMovies() {
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`);
+        const response = await fetch(`/api/fetchMovies`);
         const data = await response.json();
         const movies = data.results;
 
