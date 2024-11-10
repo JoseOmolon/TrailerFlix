@@ -1,7 +1,4 @@
-// Load environment variables from .env file
-require('dotenv').config();
-
-const API_KEY = process.env.API_KEY; // API key now fetched from environment variable
+const API_KEY = '237615b5cd69af33f4c1fb47f99783e5';
 
 // Function to fetch trending movies
 async function fetchTrendingMovies() {
@@ -177,9 +174,50 @@ document.querySelector('input[placeholder="🔎 Search Movie e.g. Marvel"]').add
 // Function to close the dropdown
 function closeDropdown(event) {
     const dropdown = document.getElementById('searchResults');
-    if (!dropdown.contains(event.target)) {
-        dropdown.style.display = 'none';
+    const searchInput = document.querySelector('input[placeholder="🔎 Search Movie"]');
+    
+    // Check if the click was outside the dropdown and the search input
+    if (!dropdown.contains(event.target) && event.target !== searchInput) {
+        dropdown.style.display = 'none'; // Hide dropdown
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const html = document.documentElement;
+
+    // Load the saved theme from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.replace('bg-light', 'bg-dark');
+        html.setAttribute('data-bs-theme', 'dark');
+        themeToggle.checked = true; // Set the switch to dark mode
+    }
+
+    // Toggle theme when the switch is clicked
+    themeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            body.classList.replace('bg-light', 'bg-dark');
+            html.setAttribute('data-bs-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.replace('bg-dark', 'bg-light');
+            html.setAttribute('data-bs-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+
+
+
+
+// Add event listener for clicks outside the dropdown
 document.addEventListener('click', closeDropdown);
+
+// Initial call to fetch and display movies
+fetchTrendingMovies();
+
+// Set an interval to refresh the movies every 3 days
+setInterval(fetchTrendingMovies, 3 * 24 * 60 * 60 * 1000);
