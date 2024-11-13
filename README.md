@@ -14,7 +14,7 @@
 
 ## Screenshots
 
-![TrailerFlix Screenshot](./assets/screenshot.jpg)  <!-- Update this with an actual screenshot if you have one -->
+![TrailerFlix Screenshot](TrailerTube.gif) 
 
 ## Tech Stack
 
