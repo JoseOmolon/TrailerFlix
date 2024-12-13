@@ -10,7 +10,7 @@
 - **Movie Details**: Display movie poster, title, and release date.
 - **Trailer Preview**: Watch movie trailers directly within the app.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
-- **API Integration**: Utilizes TMDb API to fetch movie data. flix
+- **API Integration**: Utilizes TMDb API to fetch movie data.
 
 ## Screenshots
 
