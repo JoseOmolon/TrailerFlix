@@ -5,7 +5,7 @@
 
 [Live Demo](https://trailer-flix-steel.vercel.app/)
 
-## Features 1
+## Features 
 
 - **Search Functionality**: Search for movies by title.
 - **Movie Details**: Display movie poster, title, and release date.
