@@ -14,7 +14,7 @@
 
 ## Screenshots
 
-![TrailerFlix Screenshot](TrailerTube.gif)  12345
+![TrailerFlix Screenshot](TrailerTube.gif)  1234
 
 ## Tech Stack
 
