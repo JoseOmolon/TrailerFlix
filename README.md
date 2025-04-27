@@ -16,7 +16,7 @@
 
 ![TrailerFlix Screenshot](TrailerTube.gif)  
 
-## Tech Stack
+## Tech Stack 1234
 
 - **React**: For building the UI.
 - **TMDb API**: To fetch movie data and trailers.
